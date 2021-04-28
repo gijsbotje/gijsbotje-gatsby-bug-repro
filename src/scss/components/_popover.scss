@@ -1,0 +1,36 @@
+.popper {
+  &-arrow,
+  &-arrow::before {
+    position: absolute;
+    z-index: 1;
+    width: 8px;
+    height: 8px;
+  }
+
+  &-arrow::before {
+    content: "";
+    background: #fff;
+    transform: rotate(45deg);
+  }
+
+  &-popover {
+    z-index: 20;
+    max-width: 400px;
+
+    &[data-popper-placement^="top"] .popper-arrow {
+      bottom: -4px;
+    }
+
+    &[data-popper-placement^="bottom"] .popper-arrow {
+      top: -4px;
+    }
+
+    &[data-popper-placement^="left"] .popper-arrow {
+      right: -4px;
+    }
+
+    &[data-popper-placement^="right"] .popper-arrow {
+      left: -4px;
+    }
+  }
+}

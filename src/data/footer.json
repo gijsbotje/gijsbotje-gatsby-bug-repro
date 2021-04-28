@@ -1,0 +1,17 @@
+{
+  "en": {
+    "items": [
+      {
+        "label": "footer",
+        "items": [
+          {
+            "label": "item",
+            "url": "https://github.com",
+            "external": true,
+            "newWindow": true
+          }
+        ]
+      }
+    ]
+  }
+}

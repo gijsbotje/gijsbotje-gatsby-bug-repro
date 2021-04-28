@@ -1,0 +1,11 @@
+{
+  "syntax": "scss",
+  "extends": [
+    "stylelint-config-twbs-bootstrap/scss"
+  ],
+  "rules": {
+    "selector-no-qualifying-type": [true, {"ignore": ["attribute"]}],
+    "selector-max-class": 10
+  },
+  "ignoreFiles": ["**/*.js"]
+}

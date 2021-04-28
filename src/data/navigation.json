@@ -1,0 +1,11 @@
+{
+  "en": {
+    "items": [
+      {
+        "label": "Home",
+        "url": "/",
+        "external": false
+      },
+    ]
+  }
+}

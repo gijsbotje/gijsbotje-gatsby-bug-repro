@@ -1,0 +1,3 @@
+@function ratio($w, $h) {
+  @return ($h / $w * 100%);
+}

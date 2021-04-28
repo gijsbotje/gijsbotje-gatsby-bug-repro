@@ -1,0 +1,10 @@
+@import "../../scss/variables";
+
+.card-header {
+  padding: 20px 32px 16px;
+  font-size: $body-font-size-lg;
+  line-height: $body-line-height-lg;
+  color: $black;
+  background-color: $white;
+  border-bottom: 1px solid $gray-300;
+}

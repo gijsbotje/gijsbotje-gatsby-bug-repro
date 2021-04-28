@@ -1,0 +1,48 @@
+@import "../../scss/variables";
+
+.card.card-alert {
+  border-left: 4px solid $gray-400;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  .card-body {
+    padding: 20px 24px 24px;
+
+    @media (min-width: map-get($grid-breakpoints, "md")) {
+      padding: 24px;
+    }
+  }
+
+
+  &-success {
+    border-left-color: $success;
+  }
+
+  &-warning {
+    border-left-color: $warning;
+  }
+
+  &-info {
+    border-left-color: $info;
+  }
+
+  &-danger {
+    border-left-color: $danger;
+  }
+
+  &-primary {
+    border-left-color: $primary;
+  }
+
+  &-secondary {
+    border-left-color: $secondary;
+  }
+
+  &-light {
+    border-left-color: $light;
+  }
+
+  &-dark {
+    border-left-color: $dark;
+  }
+}

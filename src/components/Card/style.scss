@@ -1,0 +1,12 @@
+@import "../../scss/variables";
+
+.card {
+  &-elevation {
+    &-1 {
+      box-shadow: 0 1px 4px rgba(13, 19, 35, .25);
+    }
+    &-2 {
+      box-shadow: 0 1px 7px rgba(14, 13, 35, .1);
+    }
+  }
+}

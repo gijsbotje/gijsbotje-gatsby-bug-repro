@@ -1,0 +1,27 @@
+@import "../../scss/variables";
+
+.overlay-message-wrapper {
+  position: relative;
+
+  &-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .75);
+
+    &.disable-background {
+      background: transparent;
+    }
+  }
+
+  &-spinner {
+    animation-duration: 1s;
+  }
+}

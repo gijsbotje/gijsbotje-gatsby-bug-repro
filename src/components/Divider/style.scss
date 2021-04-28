@@ -1,0 +1,7 @@
+@import "../../scss/variables";
+
+.divider {
+  &-gray-300 {
+    border-color: $gray-300;
+  }
+}

@@ -1,0 +1,219 @@
+backend:
+  name: git-gateway
+  repo: gijsbotje/gijsbotje-gatsby-template
+  branch: master
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
+
+local_backend: true
+publish_mode: editorial_workflow
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "navigation"
+    label: "Navigation"
+    editor:
+      preview: false
+    files:
+      - file: "src/data/navigation.json"
+        label: "Main navigation"
+        name: "Main navigation"
+        fields:
+          - label: "English"
+            name: "en"
+            widget: "object"
+            fields:
+              - label: "Button"
+                name: "button"
+                widget: "string"
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string", required: false }
+                  - { label: "External", name: "external", widget: "boolean", required: false }
+      - file: "src/data/footer.json"
+        label: "Footer navigation"
+        name: "footerNavigation"
+        fields:
+          - label: "English"
+            name: "en"
+            widget: "object"
+            fields:
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - label: "Items"
+                    name: "items"
+                    widget: "list"
+                    fields:
+                      - { label: "Label", name: "label", widget: "string" }
+                      - { label: "URL", name: "url", widget: "string", required: false }
+                      - { label: "External", name: "external", widget: "boolean", required: false }
+                      - { label: "New window", name: "newWindow", widget: "boolean", required: false }
+  - name: "pagesEN"
+    label: "Pages - EN"
+    files:
+      - file: "src/pages/en/index.md"
+        label: "Homepage"
+        name: "home"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
+          - {label: "Locale", name: "locale", widget: "hidden", default: "en"}
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - {label: "SEO title", name: "title", widget: "string"}
+              - {label: "SEO description", name: "description", widget: "text"}
+          - label: "Content"
+            name: "home"
+            widget: "object"
+            fields:
+              - label: "Banner"
+                name: "banner"
+                widget: "object"
+                fields:
+                  - label: "Title"
+                    name: "title"
+                    widget: "string"
+                  - label: "Text"
+                    name: "text"
+                    widget: "text"
+                  - label: "Buttons"
+                    name: "buttons"
+                    widget: "list"
+                    fields:
+                      - label: "Label"
+                        name: "label"
+                        widget: "string"
+                      - label: "Variant"
+                        name: "variant"
+                        widget: "select"
+                        options: ["white"]
+                      - label: "Href"
+                        name: "href"
+                        widget: "string"
+                      - label: "Outline"
+                        name: "outline"
+                        widget: "boolean"
+              - label: "Vision"
+                name: "vision"
+                widget: "object"
+                fields:
+                  - label: "Title"
+                    name: "title"
+                    widget: "string"
+                  - label: "Columns"
+                    name: "columns"
+                    widget: "list"
+                    fields:
+                      - label: "Title"
+                        name: "title"
+                        widget: "string"
+                      - label: "Text"
+                        name: "text"
+                        widget: "text"
+                      - label: "Icon"
+                        name: "icon"
+                        widget: "image"
+              - label: "Projects"
+                name: "projects"
+                widget: "object"
+                fields:
+                  - label: "Title"
+                    name: "title"
+                    widget: "string"
+                  - label: "Cards"
+                    name: "cards"
+                    widget: "list"
+                    fields:
+                      - label: "Title"
+                        name: "title"
+                        widget: "string"
+                      - label: "Text"
+                        name: "text"
+                        widget: "text"
+                      - label: "Image"
+                        name: "image"
+                        widget: "image"
+                      - label: "Link"
+                        name: "link"
+                        widget: "string"
+                      - label: "Announcement?"
+                        name: "announcement"
+                        widget: "boolean"
+              - label: "Testimonials"
+                name: "testimonials"
+                widget: "object"
+                fields:
+                  - label: "Title"
+                    name: "title"
+                    widget: "string"
+                  - label: "Stories"
+                    name: "stories"
+                    widget: "list"
+                    fields:
+                      - label: "Text"
+                        name: "text"
+                        widget: "text"
+                      - label: "Image"
+                        name: "image"
+                        widget: "image"
+                      - label: "Name"
+                        name: "name"
+                        widget: "string"
+              - label: "Portfolio"
+                name: "portfolio"
+                widget: "object"
+                fields:
+                  - label: "Title"
+                    name: "title"
+                    widget: "string"
+                  - label: "Cards"
+                    name: "cards"
+                    widget: "list"
+                    fields:
+                      - label: "Title"
+                        name: "title"
+                        widget: "string"
+                      - label: "Text"
+                        name: "text"
+                        widget: "text"
+                      - label: "Image"
+                        name: "image"
+                        widget: "image"
+                      - label: "Link"
+                        name: "link"
+                        widget: "string"
+                      - label: "Announcement?"
+                        name: "announcement"
+                        widget: "boolean"
+              - label: "Media"
+                name: "media"
+                widget: "object"
+                fields:
+                  - label: "Title"
+                    name: "title"
+                    widget: "string"
+                  - label: "Text"
+                    name: "text"
+                    widget: "text"
+                  - label: "Logos"
+                    name: "logos"
+                    widget: "list"
+                    fields:
+                      - label: "Title"
+                        name: "title"
+                        widget: "string"
+                      - label: "Image"
+                        name: "image"
+                        widget: "image"

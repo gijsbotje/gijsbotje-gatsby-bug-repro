@@ -1,0 +1,26 @@
+.text {
+  &-black {
+    color: $black;
+  }
+  @each $color, $value in $grays {
+    &-gray-#{$color} {
+      color: $value;
+
+      &:hover {
+        color: $value;
+      }
+    }
+  }
+
+  &-underdash,
+  &-underdash:hover {
+    text-decoration: none;
+    border-bottom: 1px dashed currentColor;
+  }
+}
+
+.word-break {
+  &-all {
+    word-break: break-all;
+  }
+}

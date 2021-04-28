@@ -1,0 +1,51 @@
+@import "../../scss/variables";
+
+.row {
+  &.spacing-4 {
+    margin: -(4px / 2);
+
+    > [class^="col"] {
+      padding: (4px / 2);
+    }
+  }
+
+  &.spacing-8 {
+    margin: -(8px / 2);
+
+    > [class^="col"] {
+      padding: (8px / 2);
+    }
+  }
+
+  &.spacing-16 {
+    margin: -(16px / 2);
+
+    > [class^="col"] {
+      padding: (16px / 2);
+    }
+  }
+
+  &.spacing-24 {
+    margin: -(24px / 2);
+
+    > [class^="col"] {
+      padding: (24px / 2);
+    }
+  }
+
+  &.spacing-30 {
+    margin: -(30px / 2);
+
+    > [class^="col"] {
+      padding: (30px / 2);
+    }
+  }
+
+  &.spacing-32 {
+    margin: -(32px / 2);
+
+    > [class^="col"] {
+      padding: (32px / 2);
+    }
+  }
+}

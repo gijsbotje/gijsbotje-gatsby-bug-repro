@@ -1,0 +1,25 @@
+.ratio {
+  position: relative;
+
+  &.ratio-1x1 {
+    padding-top: 100%;
+  }
+
+  .ratio-media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &.object-fit {
+      &-cover {
+        object-fit: cover;
+      }
+
+      &-contain {
+        object-fit: contain;
+      }
+    }
+  }
+}

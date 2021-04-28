@@ -1,0 +1,174 @@
+@import "../../scss/variables";
+
+.logo {
+  &-light {
+    //color: $primary;
+  }
+
+  &-dark {
+    color: $white;
+
+    .white {
+      fill: $white;
+    }
+    .white-opaque {
+      fill: rgba($white, .5);
+    }
+  }
+}
+
+.navbar {
+  transition: .2s ease;
+
+  &.scrolled {
+    box-shadow: 0 5px 15px rgba(198, 209, 215, .2);
+  }
+
+  .nav-item {
+    position: relative;
+
+    .badge {
+      position: absolute;
+      top: -2px;
+      right: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      padding: 0;
+      font-size: 10px;
+    }
+  }
+
+  @media (min-width: map-get($grid-breakpoints, "lg")) {
+    .nav-item {
+      padding-right: 4px;
+      padding-left: 4px;
+
+      .nav-link {
+        position: relative;
+        padding: 4px 16px;
+        font-weight: 700;
+        line-height: 18px;
+        transition: .2s ease;
+
+        &::after {
+          position: absolute;
+          top: 100%;
+          left: 15px;
+          width: calc(100% - 30px);
+          height: 1px;
+          content: "";
+          background-color: currentColor;
+          transition: .1s ease;
+          transform: scaleX(0);
+          transform-origin: left;
+        }
+
+        &:hover::after {
+          transform: scaleX(1);
+        }
+      }
+
+      &.active .nav-link::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &.navbar-dark,
+  &.navbar-light {
+    .navbar-drawer {
+      flex: 1;
+
+      @media (min-width: map-get($grid-breakpoints, "lg")) {
+        &-header {
+          display: none;
+        }
+      }
+
+      @media (max-width: map-get($grid-breakpoints, "lg") - 1px) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        max-width: 420px;
+        height: 100%;
+        overflow: auto;
+        background-color: $white;
+        transition: .2s ease;
+        transform: translateX(100%);
+
+        li .btn {
+          display: block;
+        }
+
+        .nav-item {
+          .badge {
+            top: 50%;
+            right: 32px;
+            transform: translateY(-50%);
+          }
+
+          .nav-link {
+            color: $black;
+
+            &.disabled {
+              color: $gray-400;
+            }
+          }
+
+          &.active .nav-link {
+            color: $primary;
+          }
+        }
+
+        &-close {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          padding: 0;
+          margin: 22px 12px 22px auto;
+        }
+
+        .nav-link {
+          padding: 16px 32px;
+          font-size: $h3-font-size;
+          font-weight: 700;
+          text-align: left;
+
+          &:hover {
+            color: $gray-800;
+          }
+        }
+
+        &.in {
+          transform: none;
+
+          + .navbar-drawer-backdrop {
+            pointer-events: all;
+            background-color: rgba($gray-900, .8);
+          }
+        }
+
+        &-backdrop {
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+          pointer-events: none;
+          background-color: rgba($gray-900, 0);
+          transition: .2s ease;
+        }
+      }
+    }
+  }
+}

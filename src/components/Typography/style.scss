@@ -1,0 +1,133 @@
+@import "../../scss/variables";
+
+/* stylelint-disable selector-no-qualifying-type */
+h1.typography,
+.h1.typography {
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+}
+
+h2.typography,
+.h2.typography {
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+}
+
+.typography {
+  font-variant-numeric: lining-nums;
+
+  &.display-1 {
+    font-size: $display1-size;
+    line-height: $display1-line-height;
+  }
+
+  &.paragraph-1 {
+    font-size: $p1-font-size;
+    line-height: $p1-line-height;
+  }
+  &.paragraph-2 {
+    font-size: $p2-font-size;
+    line-height: $p2-line-height;
+  }
+
+  &.text-heading {
+    color: $headings-color;
+  }
+
+  &.overline {
+    font-size: $overline-font-size;
+    font-weight: $overline-font-weight;
+    line-height: $overline-line-height;
+    text-transform: $overline-text-transform;
+    letter-spacing: $overline-letter-spacing;
+  }
+
+  &.button {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  &.button-1 {
+    font-size: $button-1-font-size;
+    font-weight: 700;
+    line-height: $button-1-line-height;
+    text-transform: uppercase;
+    letter-spacing: $button-1-letter-spacing;
+  }
+
+  &.button-2 {
+    font-size: $button-2-font-size;
+    font-weight: 700;
+    line-height: $button-2-line-height;
+    text-transform: uppercase;
+    letter-spacing: $button-2-letter-spacing;
+  }
+
+  &.button-3 {
+    font-size: $button-3-font-size;
+    font-weight: 700;
+    line-height: $button-3-line-height;
+    text-transform: uppercase;
+    letter-spacing: $button-3-letter-spacing;
+  }
+
+  &.button-4 {
+    font-size: $button-4-font-size;
+    font-weight: 700;
+    line-height: $button-4-line-height;
+    text-transform: uppercase;
+    letter-spacing: $button-4-letter-spacing;
+  }
+
+  &.subtitle {
+    font-size: $subtitle-font-size;
+    font-weight: 700;
+    line-height: $subtitle-line-height;
+  }
+
+  &.caption {
+    font-size: $caption-font-size;
+    line-height: $caption-line-height;
+  }
+
+  &.weight {
+    &-extra-light {
+      font-weight: 100;
+    }
+
+    &-light {
+      font-weight: 200;
+    }
+
+    &-thin {
+      font-weight: 300;
+    }
+
+    &-normal {
+      font-weight: 400;
+    }
+
+    &-medium {
+      font-weight: 500;
+    }
+
+    &-semi-bold {
+      font-weight: 600;
+    }
+
+    &-bold {
+      font-weight: 700;
+    }
+
+    &-extra-bold {
+      font-weight: 800;
+    }
+
+    &-black {
+      font-weight: 900;
+    }
+  }
+}

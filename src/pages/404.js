@@ -1,14 +1,30 @@
-import * as React from "react"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
+import Layout from '../components/Layout';
+import Grid from '../components/Grid';
+import Typography from '../components/Typography';
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-
-const NotFoundPage = () => (
-  <Layout>
-    <Seo title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+const NotFound = ({ location }) => (
+  <Layout location={location}>
+    <Helmet title="404 page not found" />
+    <Grid container className="pt-120 pb-144">
+      <Typography variant="h1" className="mb-12">
+        Page not found
+      </Typography>
+      <Typography variant="subtitle-1" className="mb-40">
+        This page was moved or could not be found
+      </Typography>
+    </Grid>
   </Layout>
-)
+);
 
-export default NotFoundPage
+NotFound.propTypes = {
+  location: PropTypes.object,
+};
+
+NotFound.defaultProps = {
+  location: {},
+};
+
+export default NotFound;

@@ -1,0 +1,5 @@
+/* stylelint-disable-next-line */
+.ReactCollapse--collapse {
+  overflow: hidden;
+  transition: height 200ms cubic-bezier(.4, 0, .2, 1);
+}

@@ -1,0 +1,17 @@
+{
+  "newsletter": {
+    "title": "Subscribe to Our Newsletter",
+    "text": "A monthly digest of the latest gijsbotje news, articles and resources.",
+    "placeholder": "Your email address",
+    "button": "Subscribe Now"
+  },
+  "footer": {
+    "workWithUs": {
+      "title": "Ready to Work with Us?",
+      "button": "Contact Our Team"
+    }
+  },
+  "contactForm": {
+
+  }
+}

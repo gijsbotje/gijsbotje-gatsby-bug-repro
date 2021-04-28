@@ -1,0 +1,31 @@
+.flip-container {
+  @media (min-width: map-get($grid-breakpoints, "lg")) {
+    perspective: 1000px;
+
+    &-inner {
+      transform-style: preserve-3d;
+      transition: .4s ease;
+    }
+
+    &:hover .flip-container-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-front,
+    .flip-back {
+      backface-visibility: hidden;
+      background-color: $white;
+    }
+
+    .flip-front {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    .flip-back {
+      transform: rotateY(180deg);
+    }
+  }
+}
